@@ -27,8 +27,8 @@ const AlbumHeader = ({title}) => {
 const AlbumImageDetail = ({picture}) => {
 
     return <div className={styles.detail}>
-           <p>{picture.format}</p>
-           <p>{picture.width} * {picture.height}</p>
+           <p>{picture?.format}</p>
+           <p>{picture?.width} * {picture?.height}</p>
         </div>
 
 }
