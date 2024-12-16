@@ -1,0 +1,57 @@
+.navigation {
+
+    background-color: green;
+    opacity: 0.5;
+    padding : 20px;
+    color : #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 1;
+    width: 100%;
+    height: 105px;
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    svg {
+
+        color: #fff;
+        font-size : 60px;
+        cursor: pointer;
+        
+        &:hover {
+            color : pink;
+        }
+
+    }
+    .nav {
+
+        display : none;
+
+        &.open {
+            display: block;
+        }
+
+    }
+
+    a {
+        color : white;
+        text-decoration: none;
+        margin : 0 5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .active {
+        color : black;
+        background-color: #fff;
+    }
+}

@@ -1,0 +1,30 @@
+.album {
+    background-color: red;
+    padding : 20px;
+    .header {
+        background-color: blue;
+    }
+
+    .image {
+        background-color: green;
+    }
+
+    .detail {
+        background-color: blueviolet;
+    }
+
+    .navigation {
+        background-color: yellow;
+        display: flex;
+
+        .dots {
+            background-color: green;  
+            width: 100%;
+        }
+
+        .navButton {
+            background-color: black;
+            color: #fff;  
+        }
+    }
+}
