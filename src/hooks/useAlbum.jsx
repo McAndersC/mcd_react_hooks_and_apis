@@ -19,7 +19,7 @@ const useAlbum = (id) => {
             setPicture(result.data.pictures[currentIndex])
             setLoading(false)
 
-        }, 0) 
+        }, 500) 
         
 
     }
@@ -32,11 +32,14 @@ const useAlbum = (id) => {
     }
 
     const previous = () => {
-        
+
+        let index = currentIndex;
+
+        setCurrentIndex(index - 1)
     }
 
     const goto = (index) => {
-        
+        setCurrentIndex(index)
     }
 
     useEffect(() => {
@@ -60,7 +63,10 @@ const useAlbum = (id) => {
       album,
       loading,
       picture,
-      next
+      next,
+      previous,
+      goto,
+      currentIndex
     }
     
 };

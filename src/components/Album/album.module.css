@@ -1,30 +1,155 @@
 .album {
-    background-color: red;
-    padding : 20px;
+
+    &.demo {
+        
+        border: 5px solid purple;
+
+        .header {
+
+            border: 5px solid pink;
+
+        }
+
+        .image {
+
+            border: 5px solid red;
+
+            .description {
+
+                border: 5px solid maroon;
+
+            }
+        }
+
+        .navigation {
+
+            border: 5px solid yellow;
+    
+            .navButton {
+    
+                border: 5px solid red;
+        
+            }
+        
+            .dots {
+
+                border: 5px solid green;
+
+            }
+        }
+
+    }
+
+
+    position: relative;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  
+    overflow: hidden;
     .header {
-        background-color: blue;
+        width: 100%;
+        text-align: center;
+    }
+
+    .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
 
     .image {
-        background-color: green;
-    }
 
-    .detail {
-        background-color: blueviolet;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        height: 50vh;
+      
+        .description {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: #000;
+            background-color: #fff;
+            padding : 10px;
+            border-radius: 10px;
+
+            p {
+                margin : 0;
+            }
+
+        }
+
+        img {
+  
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+        }
+
+
     }
 
     .navigation {
-        background-color: yellow;
-        display: flex;
 
-        .dots {
-            background-color: green;  
-            width: 100%;
-        }
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         .navButton {
-            background-color: black;
-            color: #fff;  
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            height: 40px;
+            cursor : pointer;
+    
+        }
+    
+        .dots {
+    
+            min-height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+            padding: 0 10px;
+            .dot {
+    
+                color : #000;
+                background-color: white;
+                width : 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                cursor: pointer;
+                user-select: none;
+                transition: all 0.3s ease;
+    
+                &.active {
+                    background-color: green;
+                    color : #Fff;
+                }
+    
+                &:hover {
+                    background-color: green;
+                    color: #fff;
+                   
+                 
+                }
+            }
         }
     }
+    
+
 }
