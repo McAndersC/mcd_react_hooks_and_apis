@@ -2,7 +2,7 @@ import styles from '../album.module.css'
 
 const AlbumDot = ({currentIndex, picIndex, goto}) => {
     return <div className={`${styles.dot} ${currentIndex === picIndex ? styles.active : null}`} onClick={() => goto(picIndex)}>
-        {picIndex} {}
+        {picIndex}
     </div>
 }
 

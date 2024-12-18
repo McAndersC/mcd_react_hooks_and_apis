@@ -10,10 +10,10 @@ import { useState } from 'react';
 
 
 
-const Album = () => {
+const Album = ({id}) => {
 
     const [demo, setDemo] = useState(true);
-    const {album, picture, next, previous, goto, currentIndex, loading} = useAlbum("675ee3953fe111c1af86386f");
+    const {album, picture, next, previous, goto, currentIndex, loading} = useAlbum(id);
 
     
     
@@ -25,9 +25,9 @@ const Album = () => {
                 <AlbumHeader title={album.title}></AlbumHeader>
                 <AlbumImage picture={picture}></AlbumImage>
                 <AlbumNavigation>
-                    <AlbumNavButton to={previous} text={"PREVIOUS"} icon={"FaChevronLeft"}></AlbumNavButton>
+                    <AlbumNavButton to={previous} text={"PREVIOUS"} icon={"FaBullseye"}></AlbumNavButton>
                     <AlbumDots pictures={album.pictures} goto={goto} currentIndex={currentIndex}></AlbumDots>
-                    <AlbumNavButton to={next} text={"NEXT"} icon={"FaChevronRight"}></AlbumNavButton>
+                    <AlbumNavButton to={next} text={"NEXT"} icon={"FaBullseye"}></AlbumNavButton>
                 </AlbumNavigation>
             </>
             }

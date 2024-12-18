@@ -5,7 +5,7 @@ const AlbumNavButton = ({to, text = "text", icon = "FaBullseye"}) => {
 
     return (
         <div className={styles.navButton} onClick={() => to()}>
-            {icons[icon]}
+            {icons["FaBullseye"]}
             <div>{text}</div>
         </div>
     )

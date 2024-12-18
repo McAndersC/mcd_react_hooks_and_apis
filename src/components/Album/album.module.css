@@ -137,7 +137,7 @@
                 transition: all 0.3s ease;
     
                 &.active {
-                    background-color: green;
+                    background-color: black;
                     color : #Fff;
                 }
     

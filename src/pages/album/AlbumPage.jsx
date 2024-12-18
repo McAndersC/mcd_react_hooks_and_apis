@@ -11,7 +11,8 @@ const AlbumPage = () => {
     return (
         <div className={pageStyles}>
             <div>
-                <Album></Album>
+                <Album id={"675ee3953fe111c1af86386f"}></Album>
+                <Album id={"675ee3fa3fe111c1af8638d2"}></Album>
             </div>
         </div>
     );

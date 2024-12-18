@@ -25,17 +25,26 @@ const useAlbum = (id) => {
     }
 
     const next = () => {
-
-        let index = currentIndex;
-
-        setCurrentIndex(index + 1)
+    
+        let nextIndex = currentIndex + 1;
+        if (nextIndex >= album.pictures.length) {
+            nextIndex = 0;
+        }
+     
+        setCurrentIndex(nextIndex)
     }
 
     const previous = () => {
+ 
+        let previousIndex = currentIndex - 1;
+        if (previousIndex < 0) {
 
-        let index = currentIndex;
+          previousIndex = album.pictures.length - 1;
+          
+        }
 
-        setCurrentIndex(index - 1)
+        setCurrentIndex(previousIndex)
+
     }
 
     const goto = (index) => {
@@ -54,6 +63,7 @@ const useAlbum = (id) => {
         if(album.pictures)
         {
             setPicture(album.pictures[currentIndex])
+
         }
 
     }, [currentIndex]); 
