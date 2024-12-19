@@ -1,0 +1,6 @@
+.dashboardNavigation {
+  
+    display: flex;
+    flex-direction: column;
+    border-right: 1px 
+}

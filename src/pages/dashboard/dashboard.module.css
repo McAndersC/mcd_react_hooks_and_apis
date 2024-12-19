@@ -1,0 +1,18 @@
+.dashboard {
+
+    display: flex;
+    gap : 20px;
+    .nav {
+        
+    }
+
+    .outlet {
+
+    }
+}
+
+.details {
+    background-color: silver;
+    padding : 20px;
+    
+}

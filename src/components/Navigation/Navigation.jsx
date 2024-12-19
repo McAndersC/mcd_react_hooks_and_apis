@@ -21,6 +21,14 @@ const Navigation = () => {
         {
             path : "/album",
             title : "Album"
+        },
+        {
+            path : "/albums",
+            title : "Album"
+        },
+        {
+            path : "/dashboard",
+            title : "Dashboard"
         }
     ]
   

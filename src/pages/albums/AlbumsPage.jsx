@@ -1,6 +1,6 @@
-
-
 import page from '../../styles/modules/page/page.module.css';
+import AlbumsNavigation from '../../components/AlbumNavigation/AlbumsNavigation';
+
 
 const AlbumsPage = () => {
 
@@ -10,8 +10,10 @@ const AlbumsPage = () => {
         <div className={pageStyles}>
             <div>
                 <h1>AlbumsPage</h1>
+                <AlbumsNavigation></AlbumsNavigation>
             </div>
         </div>
     );
 };
+
 export default AlbumsPage;

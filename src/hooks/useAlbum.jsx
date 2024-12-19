@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const useAlbum = (id) => {
 
     const [album, setAlbum] = useState([]);
+    const [albumId, setAlbumId] = useState(null)
     const [loading, setLoading] = useState(false);
     const [picture, setPicture] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -10,19 +11,43 @@ const useAlbum = (id) => {
     const getAlbum = async () => {
 
         setLoading(true)
-        let response = await fetch(`https://photos.webmcdm.dk/album?id=${id}`);
+        let response = await fetch(`https://photos.webmcdm.dk/album?id=${albumId}`);
         let result = await response.json();
         
-        setTimeout( () => {
-
+       
+            console.log('TEST', result)
             setAlbum(result.data)
             setPicture(result.data.pictures[currentIndex])
             setLoading(false)
 
-        }, 500) 
         
-
+        
     }
+
+    const getAlbumById = async (albumId) => {
+        setLoading(true)
+        let response = await fetch(`https://photos.webmcdm.dk/album?id=${albumId}`);
+        let result = await response.json();
+
+        console.log('TEST', result)
+        setAlbum(result.data)
+        setPicture(result.data.pictures[currentIndex])
+        setLoading(false)
+
+    } 
+
+    useEffect( () => {
+
+        console.log('ID!', id)
+
+        if(id)
+        {
+            setAlbumId(id)
+            getAlbum();
+        }
+
+
+    }, [id])
 
     const next = () => {
     
@@ -76,7 +101,8 @@ const useAlbum = (id) => {
       next,
       previous,
       goto,
-      currentIndex
+      currentIndex,
+      getAlbumById
     }
     
 };
